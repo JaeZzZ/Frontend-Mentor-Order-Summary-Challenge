@@ -90,7 +90,7 @@
       }
       main .content-container .pricing article h2{
         font-size: 16px;
-        font-weight: 900;
+        font-weight: 700;
       }
       .content-container .buttons{
         display: flex;
@@ -108,7 +108,7 @@
         transition: all 0.2s ease-in-out;
       }
       main .content-container .pricing button.btn-change{
-        font-weight: 900;
+        font-weight: 700;
         background-color: transparent;
         color: var(--bright-blue);
         text-decoration: underline;
