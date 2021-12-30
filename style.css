@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+* {
+    margin: 0px 0px;
+    padding: 0px 0px;
+    box-sizing: border-box;
+  }
+  img {
+    max-width: 100%;
+  }
+  body {
+    font-family: "Red Hat Display", sans-serif;
+    background-color: var(--pale-blue);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    min-height: 100vh;
+  }
+    body h1 {
+      font-weight: 900;
+      color:hsl(223, 47%, 23%);
+    }
+    body p {
+      font-size: 16px;
+      color: var(--desaturated-blue);
+    }
+    body a {
+      color: hsl(245, 75%, 52%);
+    }
+    body button {
+      font-family: inherit;
+    }
+    .bg-img {
+      background: url(./images/pattern-background-mobile.svg) no-repeat center/cover;
+      height: 400px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+  main {
+    width: 75%; /* do max-width for both mobile and desktop */
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 10px 27px 48px -7px hsl(228, 45%, 44%, 0.15);
+  }
+    main img.hero{
+      border-radius: 25px 25px 0 0;
+      width: 100%;
+    }
+    main .content-container {
+      padding: 20px;
+    }
+      main .content-container h1{
+        padding-top: 12px;
+        font-size: 1.5em;
+        text-align: center;
+      }
+      main .content-container p.description{
+        padding-top: 15px;
+        line-height: 1.5;
+        text-align: center;
+      }
+      main .content-container .pricing{
+      margin: 25px auto;
+      padding: 15px;
+      background-color: var(--very-pale-blue);
+      width: 90%;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      }
+      main .content-container .pricing article {
+        width: 65%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      main .content-container .pricing article h2{
+        font-size: 16px;
+        font-weight: 900;
+      }
+      .content-container .buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .btn{
+        border: none;
+        padding: 5px 10px;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+      main .content-container .pricing button.btn-change{
+        font-weight: 900;
+        background-color: transparent;
+        color: var(--bright-blue);
+        text-decoration: underline;
+        border: none;
+      }
+      .content-container button.btn-proceed{
+        font-size: 14px;
+        height: 50px;
+        width: 90%;
+        background-color: var(--bright-blue);
+        color: white;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-shadow: 1px 20px 40px -17px hsl(245, 75%, 52%);
+      }
+      .btn-proceed:hover, .btn-change:hover {
+        opacity: 0.8;
+      }
+      .content-container button.btn-cancel{
+        font-size: 14px; font-weight: 900;
+        background-color: transparent;
+        color: var(--desaturated-blue);
+        padding-top: 17px;
+      }
+      .content-container button.btn-cancel:hover {
+        color: hsl(223, 47%, 23%);
+      }
+  /* Attribution */
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    padding-top: 10px;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  /* will need to add desktop and mobile background */
+  @media (min-width: 540px) /* this is the sizing for the viewport */ {
+    main{
+      max-width: 400px;
+    /* do max-width for both mobile and desktop 'main' element */
+    }
+  }
+  @media (min-width: 650px) {
+    .bg-img {
+      background: url(./images/pattern-background-desktop.svg) no-repeat center/cover;
+      height: 50vh;
+    }
+  }
