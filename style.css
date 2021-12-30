@@ -145,8 +145,6 @@
   .attribution a {
     color: hsl(228, 45%, 44%);
   }
-
-  /* will need to add desktop and mobile background */
   @media (min-width: 540px) /* this is the sizing for the viewport */ {
     main{
       max-width: 400px;
